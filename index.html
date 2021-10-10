@@ -8,6 +8,26 @@
     
 </head>
 <body>
-    veremos todo lo que puedo hacer 
+    <script>const nextPosition = (squaresToMove, actualPosition = 1) => {
+        if (actualPosition + squaresToMove === 100) {
+          return 'Victory!' 
+        } else if (actualPosition + squaresToMove < 100) {
+          return actualPosition + squaresToMove
+        } else {
+          return actualPosition
+        }
+      };
+      
+      const rollDice = () => {
+        return 1 + Math.floor(Math.random() * (6))
+      }
+      
+      
+      rollDice()
+      console.log(nextPosition(rollDice(), 97));
+      console.log(nextPosition(4,nextPosition(3, 1)));
+      
+      console.log(nextPosition(1, 97));</script>
+
 </body>
 </html>
